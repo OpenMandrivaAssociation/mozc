@@ -1,7 +1,7 @@
 Name: mozc
 Summary: Japanese Input Method Editor designed for multi-platform
 Version: 0.13.464.102
-Release: %mkrel 1
+Release: %mkrel 2
 Group: System/Internationalization
 License: BSD-like
 URL: http://code.google.com/p/mozc/
@@ -11,7 +11,7 @@ Source0: http://mozc.googlecode.com/files/mozc-%{version}.tar.bz2
 Source2: KEN_ALL.CSV
 Source3: JIGYOSYO.CSV
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-%py_requires -d
+BuildRequires: python-devel
 BuildRequires: ibus-devel
 BuildRequires: dbus-devel
 BuildRequires: openssl-devel

@@ -1,6 +1,6 @@
 Name: mozc
 Summary: Japanese Input Method Editor designed for multi-platform
-Version: 1.1.626.102
+Version: 1.1.690.102
 Release: %mkrel 1
 Group: System/Internationalization
 License: BSD-like
@@ -21,6 +21,7 @@ BuildRequires: curl-devel
 BuildRequires: gtest-devel
 BuildRequires: protobuf-devel
 BuildRequires: qt4-devel
+BuildRequires: zinnia-devel
 
 %description
 Mozc is a Japanese Input Method Editor (IME) designed for

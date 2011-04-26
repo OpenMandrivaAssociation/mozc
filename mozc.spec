@@ -1,7 +1,7 @@
 Name: mozc
 Summary: Japanese Input Method Editor designed for multi-platform
 Version: 1.1.690.102
-Release: %mkrel 1
+Release: %mkrel 2
 Group: System/Internationalization
 License: BSD-like
 URL: http://code.google.com/p/mozc/
@@ -12,7 +12,7 @@ Source2: KEN_ALL.CSV
 Source3: JIGYOSYO.CSV
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: python-devel
-BuildRequires: ibus-devel
+BuildRequires: ibus-devel >= 1.3.9-5
 BuildRequires: dbus-devel
 BuildRequires: openssl-devel
 BuildRequires: zlib-devel
@@ -31,11 +31,18 @@ This open-source project originates from Google Japanese Input.
 %package -n ibus-mozc
 Group: System/Internationalization
 Summary: Ibus - mozc engine
+Requires(post,preun): GConf2
 Requires: ibus
 Requires: mozc = %{version}
 
 %description -n ibus-mozc
 ibus - mozc engine.
+
+%post -n ibus-%{name}
+%post_ibus_register_engine mozc ja
+
+%preun -n ibus-%{name}
+%preun_ibus_unregister_engine mozc
 
 %package tools
 Group:     System/Internationalization

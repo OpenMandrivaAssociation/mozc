@@ -4,7 +4,7 @@ Version: 1.1.690.102
 Release: %mkrel 3
 Group: System/Internationalization
 License: BSD-like
-URL: http://code.google.com/p/mozc/
+URL: https://code.google.com/p/mozc/
 Source0: http://mozc.googlecode.com/files/mozc-%{version}.tar.bz2
 # zipcode from Japan Post
 # http://www.post.japanpost.jp/zipcode/download.html

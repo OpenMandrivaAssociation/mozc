@@ -1,7 +1,7 @@
 Name: mozc
 Summary: Japanese Input Method Editor designed for multi-platform
 Version: 1.1.690.102
-Release: %mkrel 3
+Release: 4
 Group: System/Internationalization
 License: BSD-like
 URL: https://code.google.com/p/mozc/
